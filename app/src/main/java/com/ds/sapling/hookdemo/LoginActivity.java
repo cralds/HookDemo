@@ -11,6 +11,7 @@ import android.widget.Toast;
 import com.ds.sapling.hookdemo.permission.annotation.PermissionCancel;
 import com.ds.sapling.hookdemo.permission.annotation.PermissionDenied;
 import com.ds.sapling.hookdemo.permission.annotation.RequestPermission;
+import com.ds.sapling.hookdemo.permission.annotation.SingleClick;
 
 import java.util.List;
 
@@ -27,6 +28,7 @@ public class LoginActivity extends AppCompatActivity{
 
         Button mEmailSignInButton = (Button) findViewById(R.id.email_sign_in_button);
         mEmailSignInButton.setOnClickListener(new OnClickListener() {
+            @SingleClick(time = 2000)
             @Override
             public void onClick(View view) {
                 attemptLogin();
